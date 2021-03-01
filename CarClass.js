@@ -43,6 +43,15 @@ class car {
  this.fuelLevel = this.fuelLevel - fuelUse;
  }
  
+ 
+
+ OutOfGas () {
+  if (this.fuelLevel > 0) {
+    return true
+  } else {
+    return false
+  }
+}
 
  }
  
@@ -53,9 +62,8 @@ class car {
  pinto.addFuel(3); // add 3 gallons of gas
  console.log('After adding fuel', pinto.fuelLevel);
  console.log("pinto will run out of gas in", pinto.milesToEmpty)
-
+console.log(pinto.OutOfGas());
 
  //- drive() method so the car cannot go further than the amount of fuel allows
    // - addFuel() method so the car cannot take in more fuel than the tank capacity
 
- 
